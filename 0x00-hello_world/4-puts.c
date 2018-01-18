@@ -1,6 +1,8 @@
+#include <stdio.h>
+
 /**
  * main  - prints a string using function puts
- * Return: 0, because integer suppose to return a value
+ * Return: Always 0 (Success)
 */
 int  main(void)
 {
