@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <errno.h>
 
 /**
  * main  - prints given error message, followed by a new line,
