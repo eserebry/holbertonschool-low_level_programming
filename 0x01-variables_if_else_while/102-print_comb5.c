@@ -19,7 +19,8 @@ int main(void)
 			{
 				for (d = '0'; d <= '9'; d++)
 				{
-					if  (((a == c) && (b < d)) || (a < c))
+					if  (((a == c) && (b < d))
+					     || (a < c))
 					{
 						putchar(a);
 						putchar(b);
