@@ -21,12 +21,12 @@ int main(void)
 				{
 					if  (((a == c) && (b < d)) || (a < c))
 					{
-					putchar(a);
-					putchar(b);
-					putchar(' ');
-					putchar(c);
-					putchar(d);
-					putchar(' ');
+						putchar(a);
+						putchar(b);
+						putchar(' ');
+						putchar(c);
+						putchar(d);
+						putchar(' ');
 					}
 				}
 			}
