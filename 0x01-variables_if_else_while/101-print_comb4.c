@@ -22,14 +22,14 @@ int main(void)
 				{
 					if (e > d)
 					{
-						putchar(s);
-						putchar(d);
-						putchar(e);
-						if (s != '7' || d != '8' || e != '9')
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					putchar(s);
+					putchar(d);
+					putchar(e);
+					if (s != '7' || d != '8' || e != '9')
+					{
+						putchar(',');
+						putchar(' ');
+					}
 					}
 				}
 			}
