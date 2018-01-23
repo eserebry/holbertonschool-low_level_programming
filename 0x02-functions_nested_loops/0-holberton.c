@@ -5,7 +5,7 @@
  *
  * Return: O, always success..
  */
-int holberton(void)
+int main(void)
 {
 	_putchar('H');
 	_putchar('o');
