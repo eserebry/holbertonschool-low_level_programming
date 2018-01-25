@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -14,7 +13,7 @@ int main(void)
 
 	k = 1;
 	sum = 0;
-	while (sum < 1024)
+	while (k < 1024)
 	{
 		if (k % 3 == 0 || k % 5 == 0)
 			sum += k;
