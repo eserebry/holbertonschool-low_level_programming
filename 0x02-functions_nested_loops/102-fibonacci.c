@@ -8,9 +8,9 @@
  */
 int main(void)
 {
-	int f;
-	int a;
-	int b;
+	long int f;
+	long int a;
+	long int b;
 	int i;
 
 	f = 0;
@@ -23,9 +23,9 @@ int main(void)
 		b = a;
 		a = f;
 		if (i != 50)
-			printf("%d ,", f);
+			printf("%ld ,", f);
 		else
-		  printf("%d", f);
+		  printf("%ld", f);
 		i++;
 	}
 	printf("\n");
