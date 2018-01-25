@@ -17,12 +17,12 @@ int main(void)
 	a = 1;
 	b = 0;
 	i = 0;
-	while (i <= 50)
+	while (i < 50)
 	{
 		f = a + b;
 		b = a;
 		a = f;
-		if (i != 50)
+		if (i != 49)
 			printf("%ld ,", f);
 		else
 		  printf("%ld", f);
