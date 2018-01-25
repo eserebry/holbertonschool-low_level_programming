@@ -9,19 +9,23 @@
 int main(void)
 {
 	int f;
-	int k;
+	int a;
+	int b;
 	int i;
 
-	f = 1;
-	k = 0;
+	f = 0;
+	a = 1;
+	b = 0;
 	i = 0;
 	while (i <= 50)
 	{
-		k += f;
-		printf("%d, ", k);
-		i++;
-		f += k;
-		printf("%d, ", f);
+		f = a + b;
+		b = a;
+		a = f;
+		if (i != 50)
+			printf("%d ,", f);
+		else
+		  printf("%d", f);
 		i++;
 	}
 	printf("\n");
