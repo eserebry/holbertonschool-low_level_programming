@@ -6,7 +6,6 @@
  * followed by a new line.
  * @n: integer taken as an input
  *
- * Return: sum of x nad y
  */
 void print_to_98(int n)
 {
@@ -17,7 +16,7 @@ void print_to_98(int n)
 	}
 	while (n > 98)
 	{
-		printf("%d ,", n);
+		printf("%d, ", n);
 		n--;
 	}
 	if (n == 98)
