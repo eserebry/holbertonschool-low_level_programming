@@ -23,7 +23,7 @@ int main(void)
 		b = a;
 		a = f;
 		if (i != 48)
-			printf("%ld ,", f);
+			printf("%ld, ", f);
 		else
 		  printf("%ld", f);
 		i++;
