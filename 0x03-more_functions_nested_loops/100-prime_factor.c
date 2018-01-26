@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include "stdio.h"
 
 /**
@@ -25,6 +24,6 @@ int  main(void)
 		else
 			k++;
 	}
-		printf("%ld\n ", max);
+		printf("%ld\n", max);
 	return (0);
 }
