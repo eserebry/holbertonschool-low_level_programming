@@ -8,7 +8,7 @@
  * both three and five print FizzBuzz.
  *
  */
-void main(void)
+int main(void)
 {
 	int a;
 
@@ -25,4 +25,5 @@ void main(void)
 	}
 	
 	printf("Buzz\n");
+	return (0);
 }
