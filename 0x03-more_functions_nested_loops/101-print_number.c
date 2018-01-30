@@ -4,19 +4,44 @@
  * print_number - prints an integer.
  *
  * @n: input number..
+ *
  */
 void print_number(int n)
 {
+	int num;
+	int i;
+	int k;
+	int t;
+
+	t = 1;
+	i = 0;
+	num = n;
 	if (n == 0)
-		_putchar('0');
+	{
+		_putchar(0 + '0');
+	}
 	if (n < 0)
 	{
-		_putchar('-');
 		n = -n;
+		num = n;
+		_putchar('-');
 	}
-	if (n / 10)
+	while (num >= 1)
 	{
-		print_number(n / 10);
+		num = num / 10;
+		i++;
 	}
-	_putchar(n % 10 + '0');
+	k = i;
+	while (k > 1)
+	{
+		t = t * 10;
+		k--;
+	}
+	while (i > 0)
+	{
+		_putchar(n / t + '0');
+		n = n % t;
+		t = t / 10;
+		i--;
+	}
 }
