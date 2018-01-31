@@ -18,12 +18,27 @@ void rev_string(char *s)
 		i++;
 	}
 	i = i - 1;
-	while (i != k)
+	if (i % 2 == 0)
 	{
-		t = s[k];
-		s[k] = s[i];
-		s[i] = t;
-		i--;
-		k++;
+		while (i != k)
+		{
+			t = s[k];
+			s[k] = s[i];
+			s[i] = t;
+			i--;
+			k++;
+		}
 	}
+	if (i % 2 != 0)
+	{
+		while (k < i)
+		{
+			t = s[k];
+			s[k] = s[i];
+			s[i] = t;
+			i--;
+			k++;
+		}
+	}
+
 }
