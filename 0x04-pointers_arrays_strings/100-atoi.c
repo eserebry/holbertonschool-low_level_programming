@@ -11,7 +11,7 @@
 int _atoi(char *s)
 {
 	int i;
-	int in;
+	unsigned int in;
 	int sign;
 
 	i = 0;
@@ -34,5 +34,7 @@ int _atoi(char *s)
 	{
 		return (-in);
 	}
+	if (in == 0)
+		return (0);
 	return (in);
 }
