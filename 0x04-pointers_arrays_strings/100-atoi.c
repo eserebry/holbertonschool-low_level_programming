@@ -32,7 +32,7 @@ int _atoi(char *s)
 	}
 	if (sign % 2 != 0)
 	{
-		in *= -1;
+		return(-in);
 	}
 	if (in == 0)
 		return (0);
