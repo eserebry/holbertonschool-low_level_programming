@@ -1,9 +1,14 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _strncat - appends not more than n characters from string src,
+ * and then adds a terminating '\0'.
  *
- * Return: Always 0.
+ * @dest: pointer to a first element of the srting dest
+ * @src: pointer to a first element of the string src
+ * @n: number of bytes to be copied
+ *
+ * Return: pointer to the resulting string dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -16,7 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		i++;
 	}
-	while(src[k] != '\0')
+	while (src[k] != '\0')
 	{
 		if (k < n)
 			dest[i] = src[k];
