@@ -32,6 +32,7 @@ int _strcmp(char *s1, char *s2)
 		return (15);
 	if (i < k)
 		return (-15);
-	else
+	if (i == k)
 		return (0);
+	return (0);
 }
