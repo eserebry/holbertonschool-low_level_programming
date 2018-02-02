@@ -17,13 +17,16 @@ int _strcmp(char *s1, char *s2)
 
 	i = 0;
 	k = 0;
-	while (s1[i] != '\0')
+	if  (s1 && s2)
 	{
-		i++;
-	}
-	while (s2[k] != '\0')
-	{
-		k++;
+		while (s1[i] != '\0')
+		{
+			i++;
+		}
+		while (s2[k] != '\0')
+		{
+			k++;
+		}
 	}
 	if (i > k)
 		return (15);
