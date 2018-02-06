@@ -24,11 +24,15 @@ char *_strstr(char *haystack, char *needle)
 			{
 				i++;
 				j++;
+				if (haystack[i] != needle[j])
+					break;
 			}
-			return (&needle[i]);
+					return (&needle[i]);
+			/*return (&needle[i]);*/
 			j++;
 		}
 		i++;
 	}
+
 	return (0);
 }
