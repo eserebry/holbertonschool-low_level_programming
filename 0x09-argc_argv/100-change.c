@@ -13,13 +13,18 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int i = atoi(argv[1]);
 	int count = 0;
 
-	if (i < 0)
-		printf("0\n");
-	else if (argc == 2)
+	if (argc != 2 || argc == 0)
 	{
+		printf("Error\n");
+		return (1);
+	}
+	else
+	{
+		if (i < 0)
+			printf("0\n");
 		for (i = atoi(argv[1]); i >= 25; i -= 25)
 			count++;
 		while (i < 25 && i >= 10)
@@ -43,11 +48,6 @@ int main(int argc, char *argv[])
 			count++;
 		}
 		printf("%d\n", count);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
 	}
 	return (0);
 }
