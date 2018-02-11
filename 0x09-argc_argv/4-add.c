@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int sum = 0;
 
-	while  (i < argc)
+	while (i < argc)
 	{
 		if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
 		{
