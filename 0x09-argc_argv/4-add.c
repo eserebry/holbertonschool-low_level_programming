@@ -14,9 +14,9 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int sum = 0;
 
-	while (i < argc)
+	while  (i < argc)
 	{
-		if (*argv[i] >= 'a' && *argv[i] <= 'z')
+		if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
 		{
 			printf("Error\n");
 			return (1);
@@ -24,6 +24,6 @@ int main(int argc, char *argv[])
 		sum += atoi(argv[i]);
 		i++;
 	}
-	i++;
+	printf("%d\n", sum);
 	return (0);
 }
