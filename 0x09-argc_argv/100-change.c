@@ -14,8 +14,6 @@ int check(char *argv)
 
 	while (argv[i] != '\0')
 	{
-		if (argv[i] == '-')
-			return (1);
 		if (!(argv[i] >= '0' && argv[i] <= '9'))
 			return (0);
 		i++;
@@ -40,11 +38,13 @@ int main(int argc, char *argv[])
 
 	if (check(argv[i]))
 		i = atoi(argv[i]);
-	if (argc != 2 || argc == 0)
+	if (argc > 2 || argc == 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	if (atoi(argv[1]) < 0)
+		printf("0\n");
 	else
 	{
 		for (; i >= 25; i -= 25)
