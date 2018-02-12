@@ -16,13 +16,16 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+		if (*argv[i] >= '1' && *argv[i] <= '9')
+		{
+			sum += atoi(argv[i]);
+			i++;
+		}
+		else
 		{
 			printf("Error\n");
 			return (1);
 		}
-		sum += atoi(argv[i]);
-		i++;
 	}
 	printf("%d\n", sum);
 	return (0);
