@@ -1,25 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * check - check if the elemant of the string integer ot not
- *
- * @argv: pointer, to a first element, of the string argv
- *
- * Return: 1 if the element of the string is int, 0 otherwise
- */
 
-int check(char *argv)
-{
-	int i = 0;
-
-	while (argv[i] != '\0')
-	{
-		if (!(argv[i] >= '0' && argv[i] <= '9'))
-			return (0);
-		i++;
-	}
-	return (1);
-}
 /**
  * main - prints the minimum number of coins to make change for an amount
  * of money.
@@ -33,17 +14,16 @@ int check(char *argv)
 
 int main(int argc, char *argv[])
 {
-	int i = 1;
+	int i;
 	int count = 0;
 
-	if (check(argv[i]))
-		i = atoi(argv[i]);
-	if (argc > 2 || argc == 1)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (atoi(argv[1]) < 0)
+	i = atoi(argv[1]);
+	if (i < 0)
 		printf("0\n");
 	else
 	{
