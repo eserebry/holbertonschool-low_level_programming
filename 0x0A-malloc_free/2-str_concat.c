@@ -34,7 +34,7 @@ char *str_concat(char *s1, char *s2)
 	int k = 0;
 	char *s3 = (char *)malloc((_strlen(s1) + _strlen(s2) + 1) * sizeof(char));
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL || s2 == NULL || s3 == NULL)
 		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
 	{
@@ -48,5 +48,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	s3[k] = '\0';
 	return (s3);
-	free(s3);
 }
