@@ -9,7 +9,7 @@
  *
  * Return: pointer to an array grid
  */
-int **alloc_grid(int height, int width)
+int **alloc_grid(int width, int height)
 {
 	int i;
 	int j;
