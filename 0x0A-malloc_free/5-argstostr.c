@@ -28,18 +28,19 @@ int _strlen(char *str)
  */
 char *argstostr(int ac, char **av)
 {
-	int i = 0;
+	int i;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0)
 		return (NULL);
 	av = malloc(ac * sizeof(char *));
+	if (av == 0)
+		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		av[i]  = malloc(ac * sizeof(char));
+		av[i] = malloc(ac * sizeof(char));
 		if (av[i] == NULL)
 			return (NULL);
-		return (av[i]);
 		_putchar('\n');
 	}
-	return (0);
+	return (av[i]);
 }
