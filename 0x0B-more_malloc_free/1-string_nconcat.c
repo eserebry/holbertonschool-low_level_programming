@@ -48,21 +48,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		k++;
 	}
 	if (n >= _strlen(s2))
+		n = _strlen(s2);
+	for (j = 0; j < n; j++)
 	{
-
-		for (j = 0; s2[j] != '\0'; j++)
-		{
-			s3[k] = s2[j];
-			k++;
-		}
-	}
-	else
-	{
-		for (j = 0; j < n; j++)
-		{
 		s3[k] = s2[j];
 		k++;
-		}
 	}
 	s3[k] = '\0';
 	return (s3);
