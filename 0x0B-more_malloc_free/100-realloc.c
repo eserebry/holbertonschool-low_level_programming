@@ -31,7 +31,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptr == 0)
 		return (ptr2);
 	old = ptr;
-	new = ptr2;
 	if (old_size < new_size)
 	{
 		while (new[i] != '\0')
