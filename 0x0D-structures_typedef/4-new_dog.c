@@ -1,5 +1,5 @@
 #include "dog.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 /**
  * _strlen - returns lenght of the string
@@ -46,12 +46,12 @@ char *_strcpy(char *s1, char *s2)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *Dog;
+	dog_t *new_dog;
 	char *name_cpy;
 	char *owner_cpy;
 
-	Dog = malloc(sizeof(dog_t));
-	if (Dog == NULL)
+	new_dog = malloc(sizeof(struct dog_t));
+	if (new_dog == NULL)
 		return (NULL);
 	name_cpy = malloc(sizeof(char) * _strlen(name) + 1);
 	if (name_cpy == NULL)
@@ -64,8 +64,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	_strcpy(name, name_cpy);
 	_strcpy(owner, owner_cpy);
-	Dog->name = name;
-	Dog->age = age;
-	Dog->owner = owner;
-	return (Dog);
+	new_dog->name = name;
+	new_dog->age = age;
+	new_dog->owner = owner;
+	return (new_dog);
 }
