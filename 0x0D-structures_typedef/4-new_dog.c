@@ -18,7 +18,7 @@ int _strlen(char *str)
 }
 
 /**
- * _strcpy - copys s1 into s2 and adds null terminating byte
+ * _strcpy - copys s1 into s2 and adds null terminator
  *
  * @s1: pointer to a first element of s1
  * @s2: pointer to a first elelemt of s2
