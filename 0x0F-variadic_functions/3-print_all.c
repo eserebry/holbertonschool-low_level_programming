@@ -74,10 +74,10 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", sep);
 				prt[i].f(valist);
+				sep = ", ";
 			}
 			i++;
 		}
-		sep = ", ";
 		i = 0;
 		j++;
 	}
