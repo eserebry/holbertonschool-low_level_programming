@@ -33,7 +33,7 @@ void print_str(va_list valist)
  */
 void print_char(va_list valist)
 {
-	printf("%c", va_arg(valist, int));
+	printf("%c", (char)va_arg(valist, int));
 }
 
 /**
@@ -43,7 +43,7 @@ void print_char(va_list valist)
  */
 void  print_float(va_list valist)
 {
-	printf("%f", (float)va_arg(valist, int));
+	printf("%f", va_arg(valist, double));
 }
 
 /**
