@@ -7,7 +7,7 @@
 typedef struct print
 {
 	char *print;
-	void (*f)(va_list);
+	void (*f)(va_list valist);
 } print_t;
 
 int sum_them_all(const unsigned int n, ...);
