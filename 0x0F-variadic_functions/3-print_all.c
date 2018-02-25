@@ -66,11 +66,11 @@ void print_all(const char * const format, ...)
 	int j = 0;
 
 	va_start(valist, format);
-	while (format[j] != '\0' && format  != NULL)
+	while (format[j] != '\0' && format != NULL)
 	{
 		while (prt[i].print != NULL)
 		{
-			if (*prt[i].print == format[j])
+			if (format[j] == *prt[i].print)
 			{
 				printf("%s", sep);
 				prt[i].f(valist);
