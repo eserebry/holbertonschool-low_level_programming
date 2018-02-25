@@ -43,7 +43,7 @@ void print_char(va_list valist)
  */
 void  print_float(va_list valist)
 {
-	printf("%f", va_arg(valist, double));
+	printf("%f", (float)va_arg(valist, int));
 }
 
 /**
@@ -66,7 +66,7 @@ void print_all(const char * const format, ...)
 	int j = 0;
 
 	va_start(valist, format);
-	while (format[j] != '\0' && format != NULL)
+	while (format != NULL && format[j] != '\0')
 	{
 		while (prt[i].print != NULL)
 		{
