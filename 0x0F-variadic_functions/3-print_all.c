@@ -53,6 +53,7 @@ void  print_float(va_list valist)
  */
 void print_all(const char * const format, ...)
 {
+	va_list valist;
 	print_t prt[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -60,7 +61,6 @@ void print_all(const char * const format, ...)
 		{"s", print_str},
 		{NULL, NULL}
 	};
-	va_list valist;
 	char *sep = "";
 	int i = 0;
 	int j = 0;
