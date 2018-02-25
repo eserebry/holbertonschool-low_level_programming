@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "variadic_functions.h"
 
 /**
@@ -33,7 +32,7 @@ void print_str(va_list valist)
  */
 void print_char(va_list valist)
 {
-	printf("%c", (char)va_arg(valist, int));
+	printf("%c", va_arg(valist, int));
 }
 
 /**
@@ -43,7 +42,7 @@ void print_char(va_list valist)
  */
 void  print_float(va_list valist)
 {
-	printf("%f", (float)va_arg(valist, int));
+	printf("%f", va_arg(valist, double));
 }
 
 /**
@@ -62,6 +61,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	char *sep = "";
+	char *sep1 = ", ";
 	int i = 0;
 	int j = 0;
 
@@ -74,7 +74,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", sep);
 				prt[i].f(valist);
-				sep = ", ";
+				sep = sep1;
 			}
 			i++;
 		}
