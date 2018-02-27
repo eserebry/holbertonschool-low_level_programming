@@ -5,6 +5,12 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * struct print - struct print
+ *
+ * @print: The operator
+ * @f: The function associated
+ */
 typedef struct print
 {
 	char *print;
