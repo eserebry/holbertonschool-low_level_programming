@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+#include "lists.h"
 
 /**
  * print - prints before the main function is executed.
