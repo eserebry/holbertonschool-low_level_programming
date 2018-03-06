@@ -6,7 +6,7 @@
  * @head: pointer, to a singly linked list h
  * @n: value, of the new head
  *
- * Return: the adress on new element, or NULL if failed
+ * Return: adress on the new element, or NULL if failed
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
