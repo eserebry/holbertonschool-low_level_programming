@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_binary - returns the value of a bit at a given index.
+ * get_bit - returns the value of a bit at a given index.
  *
  * @n: integer to check
  * @index: index to check
