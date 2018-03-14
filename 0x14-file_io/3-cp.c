@@ -32,7 +32,7 @@ void error_99(char  *str)
  */
 void error_100(char *str)
 {
-	dprintf(STDERR_FILENO, "Error: Can't close fd  %s\n", str);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", str);
 	exit(100);
 }
 /**
