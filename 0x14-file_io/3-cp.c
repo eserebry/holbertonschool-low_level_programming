@@ -56,7 +56,7 @@ int main(int ac, char *av[])
 	file_from = open(av[1], O_RDONLY);
 	if (file_from == -1)
 		error_98(av[1]);
-	file_to = open(av[2],  O_RDWR | O_CREAT | O_TRUNC);
+	file_to = open(av[2],  O_RDWR | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 		error_99(av[2]);
 	rd = 1024;
