@@ -37,16 +37,6 @@ int main(int ac, char *av[])
 		exit(98);
 	}
 	close(file_from);
-	if (close == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", av[1]);
-		exit(100);
-	}
 	close(file_to);
-	if (close == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", av[2]);
-		exit(100);
-	}
 	return (0);
 }
