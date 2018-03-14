@@ -65,8 +65,8 @@ int main(int ac, char *av[])
 		rd = read(file_from, buff, 1024);
 		if (rd == -1)
 			error_98(av[1]);
+		wr = write(file_to, buff, rd);
 	}
-	wr = write(file_to, buff, rd);
 	if (wr == -1)
 		error_99(av[2]);
 	if (close(file_from) == -1)
