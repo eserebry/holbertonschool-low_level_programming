@@ -27,12 +27,12 @@ void error_99(char  *str)
 /**
  * error_100 - exit with code 100 and print error msg
  *
- * @str: pointer to a string str
+ * @fd: file descriptor
  *
  */
-void error_100(char *str)
+void error_100(int fd)
 {
-	dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", str);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	exit(100);
 }
 /**
@@ -70,8 +70,8 @@ int main(int ac, char *av[])
 	if (wr == -1)
 		error_99(av[2]);
 	if (close(file_from) == -1)
-		error_100(av[1]);
+		error_100(file_from);
 	if (close(file_to) == -1)
-		error_100(av[2]);
+		error_100(file_to);
 	return (0);
 }
