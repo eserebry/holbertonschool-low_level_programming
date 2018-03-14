@@ -10,7 +10,7 @@
  */
 int main(int ac, char *av[])
 {
-	int file_from, file_to, rd;
+	int file_from, file_to, rd, wr;
 	char buff[1024];
 
 	if (ac != 3)
@@ -35,6 +35,12 @@ int main(int ac, char *av[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
+	}
+	wr = write(file_to, buff, rd);
+	if (wr == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
 	}
 	close(file_from);
 	close(file_to);
