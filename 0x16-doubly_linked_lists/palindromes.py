@@ -6,6 +6,7 @@ for a in range(999, 100, -1):
             print("Palindrome is: {:d} * {:d} = {}" .format(a, b, str(mult)))
             file = open("102-result", "w")
             file.write(str(mult))
+            file.write("\n")
             file.close()
             exit()
         else:
