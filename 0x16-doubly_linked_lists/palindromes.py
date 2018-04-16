@@ -11,4 +11,4 @@ for a in range(999, 100, -1):
             exit()
         else:
             b -= 1
-        a -= 1
+    a -= 1
