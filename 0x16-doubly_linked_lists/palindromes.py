@@ -1,6 +1,6 @@
 a, b = 999, 999
-for a in range(999, 100, -1):
-    for b in range(999, 100, -1):
+for a in range(999, 800, -1):
+    for b in range(999, 800, -1):
         mult = a * b
         if (str(mult) == str(mult)[::-1]):
             print("Palindrome is: {:d} * {:d} = {}" .format(a, b, str(mult)))
@@ -8,7 +8,5 @@ for a in range(999, 100, -1):
             file.write(str(mult))
             file.write("\n")
             file.close()
-            exit()
-        else:
-            b -= 1
-    a -= 1
+            quit()
+            
