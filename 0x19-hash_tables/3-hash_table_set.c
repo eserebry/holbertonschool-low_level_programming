@@ -34,6 +34,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_table->key = strdup(key);
 	new_table->value = strdup(value);
 	new_table->next = NULL;
+	if (ht->array[index] != NULL)
+		new_table->next = ht->array[index];
 	ht->array[index] = NULL;
 	return (1);
 }
