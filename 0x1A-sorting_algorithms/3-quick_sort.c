@@ -25,7 +25,6 @@ int partition(int *array, int lo, int hi, size_t size)
 			swap = array[j];
 			array[j] = array[i];
 			array[i] = swap;
-			print_array(array, size);
 		}
 	}
 	swap = array[j];
