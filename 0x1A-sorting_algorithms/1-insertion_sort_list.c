@@ -1,25 +1,6 @@
 #include "sort.h"
 
 /**
- * size_list - returning the size of the list
- *
- * @list: Pointer to doubly linked list
- *
- * Return: size of the linked list
- */
-int size_list(listint_t *list)
-{
-	int num = 0;
-
-	while (list != NULL)
-	{
-		list = list->next;
-		num++;
-	}
-	return (num);
-}
-
-/**
  * insertion_sort_list - sorts a doubly linked list of integers
  * in ascending order using the Insertion sort algorithm
  *
