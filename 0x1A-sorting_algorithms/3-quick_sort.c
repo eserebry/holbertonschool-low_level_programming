@@ -17,20 +17,23 @@ int partition(int *array, int lo, int hi, size_t size)
 	int pivot = array[hi], swap = 0;
 	int i = lo - 1, j;
 
-	for (j = lo; j < hi; j++)
+	if (size > 1)
 	{
-		if (array[j] < pivot)
+		for (j = lo; j < hi; j++)
 		{
-			i++;
-			swap = array[j];
-			array[j] = array[i];
-			array[i] = swap;
+			if (array[j] < pivot)
+			{
+				i++;
+				swap = array[j];
+				array[j] = array[i];
+				array[i] = swap;
+			}
 		}
+		swap = array[j];
+		array[j] = array[i + 1];
+		array[i + 1] = swap;
+		print_array(array, size);
 	}
-	swap = array[j];
-	array[j] = array[i + 1];
-	array[i + 1] = swap;
-	print_array(array, size);
 	return (i + 1);
 }
 
