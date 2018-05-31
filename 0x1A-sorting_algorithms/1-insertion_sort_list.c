@@ -9,7 +9,7 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *key = NULL;
+	listint_t *key;
 
 	if (*list != NULL && list != NULL)
 	{
