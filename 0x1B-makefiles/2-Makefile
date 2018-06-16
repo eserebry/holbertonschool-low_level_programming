@@ -14,13 +14,13 @@ RM = rm -rf
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@$(CC) -o $(NAME) $(SRC)
+$(NAME): 
+	$(CC) -o $(NAME) $(OBJ)
 
 clean: /bin/$(RM) *~ $(NAME)
 
 fclean: clean
-	@/bin/$(RM) $(NAME)
+	/bin/$(RM) $(NAME)
 
 re: fclean all
 
