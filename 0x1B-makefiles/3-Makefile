@@ -8,16 +8,14 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 SRC = main.c holberton.c
 
-OBJ = $(SRC: .c=.o)
+OBJ = $(SRC:.c=.o)
 
 HEADER = m.h
 
 RM = rm -rf
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	@$(CC) -o $(NAME) $(SRC) $(CFLAGS)
+all: $(OBJ)
+	$(CC) -o $(NAME) $(SRC) $(CFLAGS)
 
 clean: /bin/$(RM) *~ $(NAME)
 
