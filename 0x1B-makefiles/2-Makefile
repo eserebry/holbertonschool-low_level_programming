@@ -12,7 +12,7 @@ HEADER = m.h
 
 RM = rm -rf
 
-all: $(NAME)
+all: $(OBJ) $(NAME)
 
 $(NAME): 
 	$(CC) -o $(NAME) $(OBJ)
