@@ -15,7 +15,7 @@ HEADER = m.h
 RM = rm -rf
 
 all: $(OBJ)
-	$(CC) -o $(NAME) $(SRC) $(CFLAGS)
+	$(CC) -o $(NAME) $(OBJ) $(CFLAGS)
 
 clean: /bin/$(RM) *~ $(NAME)
 
