@@ -4,22 +4,20 @@ NAME = holberton
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -pedantic
-
 SRC = main.c holberton.c
 
 OBJ = $(SRC:.c=.o)
 
-HEADER = m.h
-
 RM = rm -rf
 
 all: $(OBJ)
-	$(CC) -o $(NAME) $(OBJ) $(CFLAGS)
+	$(CC) -o $(NAME) $(OBJ)
 
-clean: /bin/$(RM) *~ $(NAME)
+clean: 
+	$(RM) *~ $(NAME)
 
-oclean: /bin/$(RM) $(OBJ)
+oclean: 
+	$(RM) $(OBJ)
 
 fclean: clean
 	oclean
