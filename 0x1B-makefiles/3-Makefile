@@ -19,8 +19,10 @@ $(NAME): $(OBJ)
 
 clean: /bin/$(RM) *~ $(NAME)
 
+oclean: /bin/$(RM) $(OBJ)
+
 fclean: clean
-	@/bin/$(RM) $(NAME)
+	oclean
 
 re: fclean all
 
