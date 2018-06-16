@@ -1,0 +1,27 @@
+#include <m.h>
+
+NAME = holberton
+
+CC = gcc
+
+SRC = main.c holberton.c
+
+OBJ = $(SRC: .c=.o)
+
+HEADER = m.h
+
+RM = rm -rf
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@$(CC) -o $(NAME) $(SRC)
+
+clean: /bin/$(RM) $(OBJ)
+
+fclean: clean
+	@/bin/$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: clean
