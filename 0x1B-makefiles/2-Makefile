@@ -6,15 +6,13 @@ CC = gcc
 
 SRC = main.c holberton.c
 
-OBJ = $(SRC: .c=.o)
+OBJ = $(SRC:.c=.o)
 
 HEADER = m.h
 
 RM = rm -rf
 
-all: $(OBJ) $(NAME)
-
-$(NAME): 
+all: $(OBJ)
 	$(CC) -o $(NAME) $(OBJ)
 
 clean: /bin/$(RM) *~ $(NAME)
