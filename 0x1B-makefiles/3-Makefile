@@ -4,6 +4,8 @@ NAME = holberton
 
 CC = gcc
 
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
 SRC = main.c holberton.c
 
 OBJ = $(SRC: .c=.o)
@@ -15,7 +17,7 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) -o $(NAME) $(SRC)
+	@$(CC) -o $(NAME) $(SRC) $(CFLAGS)
 
 clean: /bin/$(RM) *~ $(NAME)
 
